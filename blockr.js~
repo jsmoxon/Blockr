@@ -1,0 +1,26 @@
+var test = "The law of cause and effect is an interesting one. In Buddhism it’s an impor";
+
+function alertMsg(){
+    alert("You've spent too much time on this site!");
+};
+var testy = "alsdfj";
+function timerRun(){
+    var clock = setTimeout("alertMsg()", 3000);
+};
+
+chrome.webRequest.onBeforeRequest.addListener(
+  function(foo) {
+    console.log("foo bar: "+foo.url);
+    if (test.length < 100) {	
+	return {redirectUrl: "http://essayr.com"}};
+  }
+,
+  {
+      urls: [
+	     "http://*.roommater.us/*",
+	     "http://*.jackmoxon.com/*",
+	     ],
+	  types: ["main_frame"]
+	  },
+  //extrainfospec
+  ["blocking"]);

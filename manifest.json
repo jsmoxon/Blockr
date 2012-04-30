@@ -1,0 +1,25 @@
+{
+  "name": "Blockr",
+  "version": "1.0",
+  "description": "Be a producer, not a consumer.",
+  "background_page": "bg.html",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+    },
+  "content_scripts": [
+  {
+	"matches": ["http://*/*"]   		     ,
+	"js": ["content.js"]
+  }
+  ],
+  "permissions": ["webRequest", "webRequestBlocking",
+                  "http://icanhascheezburger.files.wordpress.com/*",
+                  "http://chzmemebase.files.wordpress.com/*",
+		  "http://*.roommater.us/*", "tabs", "http://*.jackmoxon.com/*", "*://*/*"],
+  "background": {
+    "scripts": ["loldogs.js", "blockr.js"]
+  },
+
+  "manifest_version": 2
+}
