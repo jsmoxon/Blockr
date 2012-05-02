@@ -18,7 +18,7 @@
                   "http://chzmemebase.files.wordpress.com/*",
 		  "http://*.roommater.us/*", "tabs", "http://*.jackmoxon.com/*", "*://*/*"],
   "background": {
-    "scripts": ["loldogs.js", "blockr.js"]
+    "scripts": ["jquery.js", "loldogs.js", "blockr.js"]
   },
 
   "manifest_version": 2

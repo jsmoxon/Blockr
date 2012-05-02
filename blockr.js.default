@@ -1,0 +1,51 @@
+function alertMsg(){
+    alert("You've spent too much time on this site!");
+};
+function timerRun(){
+    var clock = setTimeout("alertMsg()", 3000);
+};
+
+chrome.webRequest.onBeforeRequest.addListener(
+  function(foo) {
+    console.log("foo bar: "+foo.url);
+    if (test.length > 1) {
+        alert(bla.name+" "+bla.age)}
+    else {
+        alert("not enough writing, "+bla.name+"!");
+        return {redirectUrl: "http://essayr.com"}};
+  }
+,
+  {
+      urls: [
+             "http://*.roommater.us/*",
+             "http://*.jackmoxon.com/*",
+             ],
+          types: ["main_frame"]
+          },
+  //extrainfospec                                                                                                    
+  ["blocking"]);
+
+
+$(document).ready(function() {
+        var test = jQuery.getJSON("http://127.0.0.1:8000/json_test", function(json) {
+                alert(json.name+json.age)
+                if (json.name == "jack") {
+                    chrome.webRequest.onBeforeRequest.addListener(
+                                                                  function(foo) {
+                                                                      console.log("foo bar: "+foo.url);
+                                                                      return {redirectUrl: "http://essayr.com"}},
+        {
+            urls: [
+                   "http://*.roommater.us/*",
+                   "http://*.jackmoxon.com/*",
+                   ],
+            types: ["main_frame"]
+        },
+                                                                  //extrainfospec                                    
+                                                                  ["blocking"])
+                }
+                else {
+                    alert(json.name)
+                }
+            })
+            })

@@ -1,35 +1,32 @@
-var somejson = '{"name":"jack","age":24}';
+var somejson = '{"name":"jack","age":36}';
 var bla = JSON.parse(somejson);
 
 var test = "The law of caus";
 
-function alertMsg(){
-    alert("You've spent too much time on this site!");
-};
-function timerRun(){
-    var clock = setTimeout("alertMsg()", 3000);
-};
-
 chrome.webRequest.onBeforeRequest.addListener(
-  function(foo) {
-    console.log("foo bar: "+foo.url);
-    if (test.length > 1) {	
-	alert(bla.name+" "+bla.age)}
-    else {
-	alert("not enough writing, "+bla.name+"!");
-	return {redirectUrl: "http://essayr.com"}};
-  }
-,
-  {
-      urls: [
-	     "http://*.roommater.us/*",
-	     "http://*.jackmoxon.com/*",
-	     ],
-	  types: ["main_frame"]
-	  },
-  //extrainfospec
-  ["blocking"]);
-
-$(document).ready(function() {
-	alert("hello");
-    })
+					      function(foo) {
+						  console.log("foo bar: "+foo.url);
+						  jQuery.getJSON("http://127.0.0.1:8000/json_test", function(jsonla) {
+							      alert(jsonla.name)
+								  if (jsonla.name == "jack")
+						       {
+							   alert("before")
+						      return {redirectUrl: "http://clothesliner.com"}
+						      alert("lasdlfk")
+						  }						      
+						  else {
+						      alert("the flag is not jack!")
+						      return {redirectUrl: "http://essayr.com"};
+							  };
+						      });
+					      }
+						  ,
+					      {
+						  urls: [
+							 "http://*.roommater.us/*",
+							 "http://*.jackmoxon.com/*",
+							 ],
+						      types: ["main_frame"]
+						      },
+					      //extrainfospec                                                                           
+					      ["blocking"]);
