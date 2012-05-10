@@ -1,4 +1,4 @@
-var live_url = "http://jackmoxon.com/json_test";
+var live_url = "http://floating-dusk-6889.herokuapp.com/flag/";
 var flag = [];
 function check_json_flag() {
     $.ajax({
@@ -6,7 +6,7 @@ function check_json_flag() {
 	    async: false,
 	    dataType: 'json',
 	    success: function(json) {
-	    flag = json.name;
+	    flag = json.flag;
 	}
     });
 return flag
@@ -15,10 +15,10 @@ return flag
 //this works, but only if you reload the extension each time...so perhaps we have to have this at a lower level
 chrome.webRequest.onBeforeRequest.addListener(
 					      function(foo) {
-						  if (check_json_flag() == "okay") {
+						  if (check_json_flag() == "True") {
 							  }						      
 						  else {
-						      return {redirectUrl: "http://essayr.com"};
+						      return {redirectUrl: "http://floating-dusk-6889.herokuapp.com/write/"};
 						  };
 					      }
 						  ,
