@@ -1,4 +1,4 @@
-var live_url = "http://floating-dusk-6889.herokuapp.com/flag/";
+var live_url = "http://simple-sky-4304.herokuapp.com/flag/";
 var flag = [];
 function check_json_flag() {
     $.ajax({
@@ -18,7 +18,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 						  if (check_json_flag() == "True") {
 							  }						      
 						  else {
-						      return {redirectUrl: "http://floating-dusk-6889.herokuapp.com/write/"};
+						      return {redirectUrl: "http://simple-sky-4304.herokuapp.com/write/"};
 						  };
 					      }
 						  ,
