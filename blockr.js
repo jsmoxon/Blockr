@@ -24,7 +24,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 						  ,
 					      {
 						  urls: [
-							"<all_urls>"
+							 "*://*.jackmoxon.com/*", "<all_urls>"
 							 ],
 						      types: ["main_frame"]
 						      },
