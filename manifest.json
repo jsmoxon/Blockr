@@ -1,11 +1,7 @@
 {
   "name": "Blockr",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Be a producer, not a consumer.",
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
-    },
   "permissions": ["webRequest", "webRequestBlocking", "*://*/*"],
   "background": {
     "scripts": ["jquery.js", "blockr.js"]
