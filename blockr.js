@@ -12,7 +12,7 @@ function check_json_flag() {
 return flag
 };
 
-//this works, but only if you reload the extension each time...so perhaps we have to have this at a lower level
+
 chrome.webRequest.onBeforeRequest.addListener(
 					      function(foo) {
 						  if (check_json_flag() == "True") {
