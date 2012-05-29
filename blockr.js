@@ -18,7 +18,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 						  if (check_json_flag() == "True") {
 							  }						      
 						  else {
-						      return {redirectUrl: "http://simple-sky-4304.herokuapp.com/write/"};
+						      return {redirectUrl: "http://www.blockr.me/write/"};
 						  };
 					      }
 						  ,
