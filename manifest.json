@@ -1,6 +1,6 @@
 {
   "name": "Blockr",
-  "version": "1.2",
+  "version": "1.3",
   "description": "Be a producer, not a consumer.",
   "permissions": ["webRequest", "webRequestBlocking", "*://*/*"],
   "background": {

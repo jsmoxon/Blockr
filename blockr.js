@@ -1,4 +1,4 @@
-var live_url = "http://simple-sky-4304.herokuapp.com/flag/";
+var live_url = "http://www.blockr.me/flag/";
 var flag = [];
 function check_json_flag() {
     $.ajax({
